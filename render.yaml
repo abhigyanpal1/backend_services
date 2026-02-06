@@ -1,27 +1,27 @@
 services:
   - type: web
-    name: sre-backend-alpha
+    name: sre-backend-1
     env: python
     plan: free
     autoDeploy: true
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn backend_alpha:app --host 0.0.0.0 --port $PORT
+    startCommand: uvicorn backend_1:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
 
   - type: web
-    name: sre-backend-bravo
+    name: sre-backend-2
     env: python
     plan: free
     autoDeploy: true
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn backend_bravo:app --host 0.0.0.0 --port $PORT
+    startCommand: uvicorn backend_2:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
 
   - type: web
-    name: sre-backend-charlie
+    name: sre-backend-3
     env: python
     plan: free
     autoDeploy: true
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn backend_charlie:app --host 0.0.0.0 --port $PORT
+    startCommand: uvicorn backend_3:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
